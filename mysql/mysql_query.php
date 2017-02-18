@@ -28,4 +28,6 @@ if($res){
 
 $select_sql = "select * from user";
 $res = mysql_query($select_sql);
-var_dump($res);
+
+$row = mysql_fetch_row($res);
+print_r($row);
