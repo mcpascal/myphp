@@ -7,23 +7,26 @@
  */
 
 //连接数据库
-$conn = mysql_connect('localhost','root','root');
+$conn = mysql_connect('localhost','root','root') or die('数据库连接失败');
 //print_r($conn);
 
-//数据库连接失败的时候返回值验证
-$link = mysql_connect('localhost','root','');
-print_r($link);
-die();
+//数据库连接失败的时候返回值验证 false
+//$link = mysql_connect('localhost','root','');
+//echo $link;
+//die();
 
-if(!$conn){
-    die('数据库连接失败！'.mysql_error());
-}else {
-    echo '连接成功';
-}
+//if(!$conn){
+//    die('数据库连接失败！'.mysql_error());
+//}else {
+//    echo '连接成功';
+//}
 
 //选择数据库
 
 $select_db = mysql_select_db('myphp');
+echo $select_db;
+print_r($select_db);
+die();
 
 if(!$select_db){
     die('数据库选择失败！'.mysql_error());
