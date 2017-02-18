@@ -28,10 +28,4 @@ if($res){
 
 $select_sql = "select * from user";
 $res = mysql_query($select_sql);
-if($res){
-    while($row = mysql_fetch_row($res)){
-        echo $row['name'];
-    }
-}else{
-    echo "无数据";
-}
+var_dump($res);
