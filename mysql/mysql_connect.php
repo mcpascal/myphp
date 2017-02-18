@@ -12,7 +12,7 @@ $conn = mysql_connect('localhost','root','root');
 
 //数据库连接失败的时候返回值验证
 $link = mysql_connect('localhost','root','');
-print_r($conn);
+print_r($link);
 die();
 
 if(!$conn){
