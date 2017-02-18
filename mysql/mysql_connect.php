@@ -23,15 +23,6 @@ $conn = mysql_connect('localhost','root','root') or die('数据库连接失败')
 
 //选择数据库
 
-$select_db = mysql_select_db('myphp');
-echo $select_db;
-print_r($select_db);
-die();
-
-if(!$select_db){
-    die('数据库选择失败！'.mysql_error());
-}else{
-    echo '选择数据库失败';
-}
+mysql_select_db('myphp') or die('数据库选择失败！'.mysql_error());
 
 mysql_query('set names utf-8');
