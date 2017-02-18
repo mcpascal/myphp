@@ -12,4 +12,6 @@ $create_table_sql = 'CREATE TABLE user(`id` int,`name` varchar(50))';
 
 if(!mysql_query($create_table_sql)){
     return "创建表失败";
+}else{
+    return '表创建成功';
 }
