@@ -22,5 +22,5 @@ $res = mysql_query($insert_sql);
 if($res){
     echo "插入数据成功";
 }else{
-    echo "插入数据失败";
+    echo "插入数据失败".mysql_error();
 }
