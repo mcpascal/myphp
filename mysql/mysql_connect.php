@@ -8,6 +8,8 @@
 
 //连接数据库
 $conn = mysql_connect('localhost','root','root');
+print_r($conn);
+die();
 if(!$conn){
     die('数据库连接失败！'.mysql_error());
 }else {
