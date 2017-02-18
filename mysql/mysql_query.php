@@ -17,7 +17,7 @@ if(!$res){
 }*/
 
 
-$insert_sql = "INSERT INTO `user`(`name`) VALUES 'admin'";
+$insert_sql = "INSERT INTO `user`(`name`) VALUES（'admin'）";
 $res = mysql_query($insert_sql);
 if($res){
     echo "插入数据成功";
