@@ -28,7 +28,7 @@ if($res){
 
 $select_sql = "select * from user";
 $res = mysql_query($select_sql);
-if($res && mysql_num_rows()>0){
+if($res){
     while($row = mysql_fetch_row($res)){
         echo $row['name'];
     }
