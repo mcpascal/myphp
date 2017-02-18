@@ -18,7 +18,7 @@ if(!$conn){
 
 $select_db = mysql_select_db('myphp');
 
-if(!$select_db)){
+if(!$select_db){
     die('数据库选择失败！'.mysql_error());
 }else{
     echo '选择数据库失败';
