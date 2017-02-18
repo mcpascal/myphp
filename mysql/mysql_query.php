@@ -17,11 +17,21 @@ if(!$res){
 }*/
 
 
-$insert_sql = "INSERT INTO user(`name`) VALUES('admin')";
+/*$insert_sql = "INSERT INTO user(`name`) VALUES('admin')";
 echo $insert_sql;
 $res = mysql_query($insert_sql);
 if($res){
     echo "插入数据成功";
 }else{
     echo "插入数据失败".mysql_error();
+}*/
+
+$select_sql = "select * from user";
+$res = mysql_query($select_sql);
+if($res && mysql_num_rows()>0){
+    while($row = mysql_fetch_row($res)){
+        echo $row['name'];
+    }
+}else{
+    echo "无数据";
 }
